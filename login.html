@@ -3,45 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión</title>
-    <link rel="stylesheet" href="log.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="login-container">
         <h2>Iniciar Sesión</h2>
-        <form id="login-form">
-            <div class="input-group">
-                <label for="login-usuario">Usuario</label>
-                <input type="text" id="login-usuario" required placeholder="Ingrese su usuario">
-                <small class="error-message"></small>
-            </div>
+        <form action="#" method="POST">
+            <label for="usuario">Usuario:</label>
+            <input type="text" id="usuario" name="usuario" required>
             
-            <div class="input-group">
-                <label for="login-password">Contraseña</label>
-                <div class="password-wrapper">
-                    <input type="password" id="login-password" required placeholder="Ingrese su contraseña">
-                    <i class="bi bi-eye toggle-password" onclick="togglePassword('login-password')"></i>
-                </div>
-                <small class="error-message"></small>
-            </div>
-            
-            <div class="input-group">
-                <label>Código Captcha</label>
-                <div class="captcha-box">
-                    <span id="captcha-text"></span>
-                    <button type="button" onclick="generateCaptcha()">↻</button>
-                </div>
-                <input type="text" id="captcha-input" required placeholder="Ingrese el captcha">
-                <small class="error-message"></small>
-            </div>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
             
             <button type="submit">Ingresar</button>
+            <br> <br>
+            <a href="recoverpwd.html">¿Olvidaste tu contraseña?</a>
         </form>
-        <p>¿No tienes una cuenta? <a href="registro.html">Regístrate</a></p>
-
-       <a href="recoverpwd.html">Recuperar cotraseña</a>
     </div>
-    <script src="log.js"></script>
 </body>
 </html>
